@@ -36,9 +36,7 @@ class AddressBook(UserDict):
                   upcoming_birthdays.append(
                         {
                             "name": name,
-                            "congratulation_date": congratulation_date.strftime(
-                                "%d.%m.%Y"
-                            ),
+                            "congratulation_date": congratulation_date.strftime("%d.%m.%Y"),
                         }
                     )
      return upcoming_birthdays
