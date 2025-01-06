@@ -1,4 +1,4 @@
-from field_name_phone import Name, Phone, Birthday
+from field_name_phone_birthday import Name, Phone, Birthday
 
 class Record:
     def __init__(self, name):
