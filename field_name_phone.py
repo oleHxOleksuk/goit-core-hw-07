@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Field:
     def __init__(self, value):
         self.value = value
@@ -23,5 +25,15 @@ class Phone(Field):
             raise ValueError("The phone number must contain only numbers")
 
         return number
+    
+class Birthday(Field):
+    def __init__(self, value: str):
+        try:
+            self.value = datetime.strptime(value, "%d.%m.%Y")
+        except ValueError:
+            raise ValueError("Invalid date format. Use DD.MM.YYYY")
+
+
+
          
 
